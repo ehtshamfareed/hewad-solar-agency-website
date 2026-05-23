@@ -875,6 +875,25 @@
 		});
 	}
 
+// 	if($('.price-range-slider').length){
+//     $( ".price-range-slider" ).slider({
+//         range: true,
+//         min: 0,
+//         max: 500000,
+//         values: [0, 500000],
+//         slide: function( event, ui ) {
+//             $( "input.property-amount" ).val(
+//                 "PKR " + ui.values[0] + " - PKR " + ui.values[1]
+//             );
+//         }
+//     });
+
+//     $( "input.property-amount" ).val(
+//         "PKR " + ( ".price-range-slider" ).slider("values", 0) +
+//         " - PKR " + ( ".price-range-slider" ).slider("values", 1)
+//     );
+// }
+
 
 	if ($('.product-details-content .bxslider').length) {
 		$('.product-details-content .bxslider').bxSlider({
