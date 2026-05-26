@@ -2494,7 +2494,7 @@
 /** news-two **/
 
 .news-block-one .inner-box .post-date-two{
-  background: orangered;
+  background: #e35712 !important;
 }
 
 .news-block-one .inner-box .post-date-two h4{
