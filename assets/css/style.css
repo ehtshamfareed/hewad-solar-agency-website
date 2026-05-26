@@ -44,6 +44,10 @@
 
 /** banner-section **/
 
+  /* body{
+   overflow-x: hidden;
+}  */
+
 .slider-one{
   position: relative;
   overflow: hidden;
@@ -2490,7 +2494,7 @@
 /** news-two **/
 
 .news-block-one .inner-box .post-date-two{
-  background: #262628;
+  background: orangered;
 }
 
 .news-block-one .inner-box .post-date-two h4{
@@ -9973,6 +9977,9 @@ div[class^="bubble-"] {
 
 /** news-15 **/
 
+
+
+
 .news-15 .news-block-one .inner-box .image{
   background: #141417;
 }
@@ -9995,7 +10002,7 @@ div[class^="bubble-"] {
 }
 
 .news-15 .shape .shape-3{
-  right: -50px;
+  right: 0px;
   bottom: -120px;
   width: 400px;
   height: 400px;
