@@ -565,7 +565,7 @@
                                             <button class="filter-btn fs_15 fw_sbold font_family_inter uppercase color_black">Filter</button>
                                         </div>
                                         <div class="pull-right">
-                                            <p class="d_iblock fs_15 fw_medium font_family_inter mr_10">filter by Price:</p>
+                                            <p class="d_iblock fs_15 fw_medium font_family_inter mr_10">filter Price:</p>
                                             <div class="title p_relative d_iblock"></div>
                                             <div class="input p_relative d_iblock fs_15"><input type="text" class="property-amount" name="field-name" readonly=""></div>
                                         </div>
@@ -612,10 +612,21 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 🔥 FILTER SECTION (ADD HERE) -->
+                          <div class="filters">
+                          <ul class="filter-btns">
+                         <li data-filter="*" class="active">All</li>
+                         <li data-filter=".panels">Solar Panels</li>
+                         <li data-filter=".inverters">Inverters</li>
+                         <li data-filter=".batteries">Batteries</li>
+                         <li data-filter=".accessories">Accessories</li>
+                            </ul>
+                           </div>
+                           <br>
                             <div class="wrapper grid">
                                 <div class="shop-grid-content">
                                     <div class="row clearfix">
-                                        <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
+                                        <div class="col-lg-4 col-md-6 col-sm-12 shop-block panels">
                                             <div class="shop-block-one">
                                                 <div class="inner-box p_relative d_block tran_5 mb_30">
                                                     <div class="image-box p_relative d_block">
@@ -644,7 +655,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                            <div class="shop-block-one">
+                                            <div class="shop-block-one nverters">
                                                 <div class="inner-box p_relative d_block tran_5 mb_30">
                                                     <div class="image-box p_relative d_block">
                                                         <figure class="image p_relative d_block"><img src="assets/images/shop/Inverex  Inverter.jpg" alt="Inverex Nitrox 5KW Hybrid Inverter"></figure>
@@ -671,7 +682,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                            <div class="shop-block-one">
+                                            <div class="shop-block-one batteries">
                                                 <div class="inner-box p_relative d_block tran_5 mb_30">
                                                     <div class="image-box p_relative d_block">
                                                         <span class="category sale p_absolute l_10 t_10 fs_13 fw_medium font_family_poppins z_1">Sale</span>
@@ -698,8 +709,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                            <div class="shop-block-one">
+                                       <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
+                                        <div class="shop-block-one batteries">
                                                 <div class="inner-box p_relative d_block tran_5 mb_30">
                                                     <div class="image-box p_relative d_block">
                                                         <figure class="image p_relative d_block"><img src="assets/images/shop/Crown Battery.jpg" alt="Crown Battery"></figure>
@@ -710,7 +721,7 @@
                                                             <li><a href="shop-details.html"><i class="icon-140"></i></a></li>
                                                         </ul>
                                                     </div>
-                                                    <div class="lower-content p_relative d_block pt_3 pr_20 pb_20 pl_20">
+                                                    <div class="lower-content p_relative d_block pt_3 pr_20 pb_20 pl">
                                                         <h6 class="d_block fs_15 lh_20 mb_4"><a href="shop-details.html" class="d_iblock color_black">Crown 100Ah Lithium Ion Battery<br />Charge</a></h6>
                                                         <ul class="rating clearfix">
                                                             <li class="p_relative d_iblock pull-left mr_3 fs_13"><i class="icon-20"></i></li>

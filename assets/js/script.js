@@ -648,6 +648,51 @@
 	}
 	
 	enableMasonry();
+	
+// 	function enableMasonry() {
+
+//     var $container = $('.grid .row');
+//     var $filter = $('.filter-btns');
+//     var winDow = $(window);
+
+//     $container.isotope({
+//         itemSelector: '.shop-block',
+//         layoutMode: 'fitRows',
+//         transitionDuration: '0.5s'
+//     });
+
+//     $filter.find('li').on('click', function () {
+
+//         var selector = $(this).attr('data-filter');
+
+//         $container.isotope({
+//             filter: selector
+//         });
+
+//         return false;
+//     });
+
+//     $('.filter-btns li').on('click', function () {
+
+//         var $this = $(this);
+
+//         if (!$this.hasClass('active')) {
+//             $('.filter-btns li').removeClass('active');
+//             $this.addClass('active');
+//         }
+//     });
+
+//     winDow.on('resize', function () {
+
+//         var selector = $filter.find('li.active').attr('data-filter');
+
+//         $container.isotope({
+//             filter: selector
+//         });
+//     });
+// }
+
+// enableMasonry();
 
 
     // Progress Bar
@@ -1010,7 +1055,41 @@
 	}
     
 
-    
+// var e = document.getElementById("mouse-pointer");
+
+// document.body.addEventListener("mousemove", function(n) {
+//     if (!e) return;
+//     e.style.left = n.clientX + "px";
+//     e.style.top = n.clientY + "px";
+// });
+
+// $(document).ready(function(){
+
+//     $(".funfact-eight, .subscribe-one.home-16, .clients-one.home-7")
+//     .on("mouseenter", function() {
+//         $('.mouse-pointer').addClass("black");
+//     })
+//     .on("mouseleave", function() {
+//         $('.mouse-pointer').removeClass("black");
+//     });
+
+//     $(".pointer-large, .owl-prev, .owl-next, .theme-btn")
+//     .on("mouseenter", function() {
+//         $('.mouse-pointer').addClass("large");
+//     })
+//     .on("mouseleave", function() {
+//         $('.mouse-pointer').removeClass("large");
+//     });
+
+//     $(".pointer-right, .banner-carousel")
+//     .on("mouseenter", function() {
+//         $('.mouse-pointer').addClass("right");
+//     })
+//     .on("mouseleave", function() {
+//         $('.mouse-pointer').removeClass("right");
+//     });
+
+// });
 
 	/*	=========================================================================
 	When document is Scrollig, do
