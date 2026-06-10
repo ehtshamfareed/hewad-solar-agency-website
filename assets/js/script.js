@@ -897,77 +897,30 @@
 	}
 
 
-	// //Price Range Slider
-	// if($('.price-range-slider').length){
-	// 	$( ".price-range-slider" ).slider({
-	// 		range: true,
-	// 		min: 120,
-	// 		max: 500,
-	// 		values: [ 120, 300 ],
-	// 		slide: function( event, ui ) {
-	// 		$( "input.property-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-	// 		}
-	// 	});
+	//Price Range Slider
+	if($('.price-range-slider').length){
+		$( ".price-range-slider" ).slider({
+			range: true,
+			min: 120,
+			max: 500,
+			values: [ 120, 300 ],
+			slide: function( event, ui ) {
+			$( "input.property-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+			}
+		});
 		
-	// 	$( "input.property-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - $" + $( ".price-range-slider" ).slider( "values", 1 ) );	
-	// }
+		$( "input.property-amount" ).val( "PKR"+ $( ".price-range-slider" ).slider( "values", 0 ) + " - RS" + $( ".price-range-slider" ).slider( "values", 1 ) );	
+
+	}
 
 
-	// //Jquery Spinner / Quantity Spinner
-	// if($('.quantity-spinner').length){
-	// 	$("input.quantity-spinner").TouchSpin({
-	// 	  verticalbuttons: true
-	// 	});
-	// }
-	
-// Price Range Slider
-if ($('.price-range-slider').length) {
-
-    $(".price-range-slider").slider({
-        range: true,
-        min: 50000,
-        max: 500000,
-        step: 1,
-        values: [50000, 300000],
-
-        slide: function (event, ui) {
-            updatePrice(ui.values[0], ui.values[1]);
-        }
-    });
-
-    // default value on load
-    updatePrice(
-        $(".price-range-slider").slider("values", 0),
-        $(".price-range-slider").slider("values", 1)
-    );
-}
-
-// function to update input properly
-function updatePrice(min, max) {
-    $("input.property-amount").val("PKR " + min + " - PKR " + max);
-}
-
-// 	if($('.price-range-slider').length){
-//     $( ".price-range-slider" ).slider({
-//         range: true,
-//         min: 0,
-//         max: 500000,
-//         values: [0, 500000],
-//         slide: function( event, ui ) {
-//             $( "input.property-amount" ).val(
-//                 "PKR " + ui.values[0] + " - PKR " + ui.values[1]
-//             );
-//         }
-//     });
-
-//     $( "input.property-amount" ).val(
-//         "PKR " + ( ".price-range-slider" ).slider("values", 0) +
-//         " - PKR " + ( ".price-range-slider" ).slider("values", 1)
-//     );
-// }
-
-
-	if ($('.product-details-content .bxslider').length) {
+	//Jquery Spinner / Quantity Spinner
+	if($('.quantity-spinner').length){
+		$("input.quantity-spinner").TouchSpin({
+		  verticalbuttons: true
+		});
+	}
+if ($('.product-details-content .bxslider').length) {
 		$('.product-details-content .bxslider').bxSlider({
 	        nextSelector: '.product-details-content #slider-next',
 	        prevSelector: '.product-details-content #slider-prev',
