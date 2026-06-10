@@ -13069,6 +13069,10 @@ div[class^="bubble-"] {
 
 .service-details-content .accordion-box .block .acc-btn.active{
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.10);
+
+}
+
+.service-details-content .accordion-box .block .acc-btn.active .text{
       background: #e45712;
 }
 
@@ -13652,7 +13656,6 @@ div[class^="bubble-"] {
     color: #fff;
 }
 
-
 .faq-page-section .accordion-box .block .acc-btn.active{
   border-radius: 5px;
   border-color: transparent;
@@ -13754,6 +13757,10 @@ div[class^="bubble-"] {
 }
 
 .faq-page-section.faq-page-2 .accordion-box .block .acc-btn.active .icon-outer{
+  color: #1a1a1d;
+}
+
+.faq-page-section.faq-page-2 .accordion-box .block .acc-btn.active .icon-outer .my-icon{
   color: #fff;
 }
 
