@@ -1033,44 +1033,6 @@ if ($('.product-details-content .bxslider').length) {
 	        })
 	    }
 	}
-    
-
-// var e = document.getElementById("mouse-pointer");
-
-// document.body.addEventListener("mousemove", function(n) {
-//     if (!e) return;
-//     e.style.left = n.clientX + "px";
-//     e.style.top = n.clientY + "px";
-// });
-
-// $(document).ready(function(){
-
-//     $(".funfact-eight, .subscribe-one.home-16, .clients-one.home-7")
-//     .on("mouseenter", function() {
-//         $('.mouse-pointer').addClass("black");
-//     })
-//     .on("mouseleave", function() {
-//         $('.mouse-pointer').removeClass("black");
-//     });
-
-//     $(".pointer-large, .owl-prev, .owl-next, .theme-btn")
-//     .on("mouseenter", function() {
-//         $('.mouse-pointer').addClass("large");
-//     })
-//     .on("mouseleave", function() {
-//         $('.mouse-pointer').removeClass("large");
-//     });
-
-//     $(".pointer-right, .banner-carousel")
-//     .on("mouseenter", function() {
-//         $('.mouse-pointer').addClass("right");
-//     })
-//     .on("mouseleave", function() {
-//         $('.mouse-pointer').removeClass("right");
-//     });
-
-// });
-
 	/*	=========================================================================
 	When document is Scrollig, do
 	========================================================================== */
