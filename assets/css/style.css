@@ -2494,7 +2494,7 @@
 /** news-two **/
 
 .news-block-one .inner-box .post-date-two{
-  background: #e35712 !important;
+  background: #FBB03B !important;
 }
 
 .news-block-one .inner-box .post-date-two h4{
@@ -10682,7 +10682,7 @@ div[class^="bubble-"] {
 .project-seven .sortable-masonry .filter-tabs li{
   font-size: 17px;
   font-family: 'Poppins', sans-serif;
-  color: #141417;
+  color: #114174;
 }
 
 .project-seven .sortable-masonry .filter-tabs li:before{
@@ -17023,7 +17023,7 @@ body.out .mouse-pointer {
   font-size: 15px;
   padding: 12px 31px;
   border-radius: 5px;
-  background: #e35712;
+  background: #FBB03B;
 }
 
 .request-form .theme-btn{
@@ -17033,7 +17033,7 @@ body.out .mouse-pointer {
   padding: 12px 20px;
   width: 166px;
   border-radius: 5px;
-  background: #e35712;
+  background: #FBB03B;
 }
 
 .about-16 .theme-btn{
@@ -17042,7 +17042,7 @@ body.out .mouse-pointer {
   font-size: 15px;
   padding: 17px 40px;
   border-radius: 5px;
-  background: #e35712;
+  background: #FBB03B;
 }
 
 .service-block-four .inner-box,
