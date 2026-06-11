@@ -909,8 +909,7 @@
 			}
 		});
 		
-		$( "input.property-amount" ).val( "PKR"+ $( ".price-range-slider" ).slider( "values", 0 ) + " - RS" + $( ".price-range-slider" ).slider( "values", 1 ) );	
-
+		$( "input.property-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - pkr" + pkr( ".price-range-slider" ).slider( "values", 1 ) );	
 	}
 
 
