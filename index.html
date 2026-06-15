@@ -8,6 +8,26 @@
 
     <title>HEWAD SOLAR AGENCY - Dera Ghazi Khan</title>
 
+    <!-- SEO Meta Description -->
+    <meta name="description"
+        content="Hewad Solar provides reliable solar energy solutions for residential, commercial, and industrial projects, including solar panel installation, maintenance, and energy-saving systems.">
+
+    <!-- SEO Keywords -->
+    <meta name="keywords"
+        content="Hewad Solar, solar energy, solar panels, solar system installation, residential solar, commercial solar, industrial solar, solar panel installation, solar maintenance, solar power solutions, renewable energy">
+
+    <!-- OpenGraph Tags -->
+  <!-- OpenGraph Tags -->
+<meta property="og:title" content="Hewad Solar | Residential, Commercial & Industrial Solar Solutions">
+<meta property="og:description" content="Hewad Solar offers trusted solar energy solutions for homes, businesses, and industries with professional solar installation, maintenance, and energy-saving services.">
+<meta property="og:image" content="https://hewad-solar.netlify.app/assets/images/og-image.jpg">
+<meta property="og:image:secure_url" content="https://hewad-solar.netlify.app/assets/images/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="500">
+<meta property="og:image:height" content="500">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hewad-solar.netlify.app/">
+
     <!-- Fav Icon -->
     <link rel="icon" href="assets/images/favicon-16.ico" type="image/x-icon">
 
@@ -100,21 +120,32 @@
                 <div class="overlay-layer"></div>
                 <div class="auto-container">
                     <div class="search-form">
-                        <form method="post" action="index.html">
-                            <div class="form-group">
+                        <form id="site-search-form" method="post" action="javascript:void(0);" novalidate>
+                            <div class="form-group search-suggestion-wrapper">
                                 <fieldset>
-                                    <input type="search" class="form-control" name="search-input" value=""
-                                        placeholder="Type your keyword and hit" required>
-                                    <button type="submit"><i class="icon-1"></i></button>
+                                    <input type="search" id="site-search-input" class="form-control" name="search-input"
+                                        value="" placeholder="Type your keyword and hit" autocomplete="off">
+
+                                    <button type="submit">
+                                        <i class="icon-1"></i>
+                                    </button>
                                 </fieldset>
+
+                                <ul id="site-search-suggestions" class="site-search-suggestions">
+                                    <li data-url="services.html">pricing</li>
+                                    <li data-url="service-details.html">net metering</li>
+                                    <li data-url="shop.html">battery</li>
+                                </ul>
+
+                                <p id="site-search-message" class="site-search-message">
+                                    No result found. Try pricing, net metering, or battery.
+                                </p>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <!-- sidebar cart item -->
         <div class="xs-sidebar-group info-group info-sidebar">
             <div class="xs-overlay xs-bg-black"></div>
@@ -138,7 +169,7 @@
                                         energy-saving technologies
                                         designed to provide long-term performance and sustainable power solutions.
                                     </p>
-                                </div>>
+                                </div>
                             </div>
                             <div class="info-inner">
                                 <h4>Find Us Our Location</h4>
@@ -1484,79 +1515,93 @@
 
 
         <!-- funfact-eight -->
-      <section class="funfact-eight text-center p_relative">
-    <div class="auto-container">
-        <div class="inner-container p_relative b_radius_10 pt_50 pb_55">
-            <div class="row clearfix">
+        <section class="funfact-eight text-center p_relative">
+            <div class="auto-container">
+                <div class="inner-container p_relative b_radius_10 pt_50 pb_55">
+                    <div class="row clearfix">
 
-                <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
-                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="00ms"
-                        data-wow-duration="1500ms">
-                        <div class="inner-box p_relative d_block">
-                            <div class="icon-box p_absolute d_iblock fs_120">
-                                <div class="icon"><i class="icon-131"></i></div>
-                                <div class="icon-img hidden-icon"><img src="assets/images/icons/hid-icon-100.png" alt=""></div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
+                            <div class="counter-block-one wow slideInUp animated" data-wow-delay="00ms"
+                                data-wow-duration="1500ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_absolute d_iblock fs_120">
+                                        <div class="icon"><i class="icon-131"></i></div>
+                                        <div class="icon-img hidden-icon"><img
+                                                src="assets/images/icons/hid-icon-100.png" alt=""></div>
+                                    </div>
+                                    <div
+                                        class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
+                                        <span class="count-text font_family_inter" data-speed="2500"
+                                            data-stop="500">0</span><span>+</span>
+                                    </div>
+                                    <p class="p_relative d_block fs_16 font_family_poppins">Solar Systems Installed</p>
+                                </div>
                             </div>
-                            <div class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
-                                <span class="count-text font_family_inter" data-speed="2500" data-stop="500">0</span><span>+</span>
-                            </div>
-                            <p class="p_relative d_block fs_16 font_family_poppins">Solar Systems Installed</p>
                         </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
+                            <div class="counter-block-one wow slideInUp animated" data-wow-delay="200ms"
+                                data-wow-duration="1500ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_absolute d_iblock fs_120">
+                                        <div class="icon"><i class="icon-132"></i></div>
+                                        <div class="icon-img hidden-icon"><img
+                                                src="assets/images/icons/hid-icon-101.png" alt=""></div>
+                                    </div>
+                                    <div
+                                        class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
+                                        <span class="count-text font_family_inter" data-speed="2500"
+                                            data-stop="10">0</span><span>MW+</span>
+                                    </div>
+                                    <p class="p_relative d_block fs_16 font_family_poppins">Cumulative Clean Energy
+                                        Generated</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
+                            <div class="counter-block-one wow slideInUp animated" data-wow-delay="400ms"
+                                data-wow-duration="1500ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_absolute d_iblock fs_120">
+                                        <div class="icon"><i class="icon-133"></i></div>
+                                        <div class="icon-img hidden-icon"><img
+                                                src="assets/images/icons/hid-icon-102.png" alt=""></div>
+                                    </div>
+                                    <div
+                                        class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
+                                        <span class="count-text font_family_inter" data-speed="2500"
+                                            data-stop="100">0</span><span>%</span>
+                                    </div>
+                                    <p class="p_relative d_block fs_16 font_family_poppins">Customer Satisfaction Rate
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
+                            <div class="counter-block-one wow slideInUp animated" data-wow-delay="600ms"
+                                data-wow-duration="1500ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_absolute d_iblock fs_120">
+                                        <div class="icon"><i class="icon-134"></i></div>
+                                        <div class="icon-img hidden-icon"><img
+                                                src="assets/images/icons/hid-icon-103.png" alt=""></div>
+                                    </div>
+                                    <div
+                                        class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
+                                        <span class="count-text font_family_inter" data-speed="2500"
+                                            data-stop="50">0</span><span> M+</span>
+                                    </div>
+                                    <p class="p_relative d_block fs_16 font_family_poppins">PKR Combined Bills Saved</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
-                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="200ms"
-                        data-wow-duration="1500ms">
-                        <div class="inner-box p_relative d_block">
-                            <div class="icon-box p_absolute d_iblock fs_120">
-                                <div class="icon"><i class="icon-132"></i></div>
-                                <div class="icon-img hidden-icon"><img src="assets/images/icons/hid-icon-101.png" alt=""></div>
-                            </div>
-                            <div class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
-                                <span class="count-text font_family_inter" data-speed="2500" data-stop="10">0</span><span>MW+</span>
-                            </div>
-                            <p class="p_relative d_block fs_16 font_family_poppins">Cumulative Clean Energy Generated</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
-                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="400ms"
-                        data-wow-duration="1500ms">
-                        <div class="inner-box p_relative d_block">
-                            <div class="icon-box p_absolute d_iblock fs_120">
-                                <div class="icon"><i class="icon-133"></i></div>
-                                <div class="icon-img hidden-icon"><img src="assets/images/icons/hid-icon-102.png" alt=""></div>
-                            </div>
-                            <div class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
-                                <span class="count-text font_family_inter" data-speed="2500" data-stop="100">0</span><span>%</span>
-                            </div>
-                            <p class="p_relative d_block fs_16 font_family_poppins">Customer Satisfaction Rate</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 funfact-block">
-                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="600ms"
-                        data-wow-duration="1500ms">
-                        <div class="inner-box p_relative d_block">
-                            <div class="icon-box p_absolute d_iblock fs_120">
-                                <div class="icon"><i class="icon-134"></i></div>
-                                <div class="icon-img hidden-icon"><img src="assets/images/icons/hid-icon-103.png" alt=""></div>
-                            </div>
-                            <div class="count-outer count-box p_relative d_block fs_60 lh_60 fw_bold mb_9 font_family_inter">
-                                <span class="count-text font_family_inter" data-speed="2500" data-stop="50">0</span><span> M+</span>
-                            </div>
-                            <p class="p_relative d_block fs_16 font_family_poppins">PKR Combined Bills Saved</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </div>
-</section>
+        </section>
         <!-- funfact-eight end -->
 
 
@@ -1927,13 +1972,15 @@
                                                     src="assets/images/icons/hid-icon-104.png" alt=""></div>
                                         </div>
                                         <div class="text p_relative d_block mb_30">
-                                            <p class="fs_18 fw_medium font_family_poppins color_black">10KW system installed. Electricity bill dropped to zero!
-                                               </p>
+                                            <p class="fs_18 fw_medium font_family_poppins color_black">10KW system
+                                                installed. Electricity bill dropped to zero!
+                                            </p>
                                         </div>
                                         <div class="author p_relative d_block pl_90 pt_9 pb_9">
                                             <figure class="thumb-box p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img
                                                     src="assets/images/resource/testimonial-1.png" alt=""></figure>
-                                            <h4 class="d_block fs_18 lh_28 mb_4 fw_sbold font_family_inter">Muhammad Asif
+                                            <h4 class="d_block fs_18 lh_28 mb_4 fw_sbold font_family_inter">Muhammad
+                                                Asif
                                             </h4>
                                             <p class="fs_15 font_family_poppins">Khayaban-e-Sarwar, DG Khan</p>
 
@@ -1986,14 +2033,16 @@
                                                     src="assets/images/icons/hid-icon-104.png" alt=""></div>
                                         </div>
                                         <div class="text p_relative d_block mb_30">
-                                            <p class="fs_18 fw_medium font_family_poppins color_black"></p>Solar tube well water discharge is excellent. Saving diesel expenses.</p>
+                                            <p class="fs_18 fw_medium font_family_poppins color_black"></p>Solar tube
+                                            well water discharge is excellent. Saving diesel expenses.</p>
                                         </div>
                                         <div class="author p_relative d_block pl_90 pt_9 pb_9">
                                             <figure class="thumb-box p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img
                                                     src="assets/images/resource/testimonial-3.png" alt=""></figure>
-                                            <h4 class="d_block fs_18 lh_28 mb_4 fw_sbold font_family_inter"> Chaudhary Bashir
+                                            <h4 class="d_block fs_18 lh_28 mb_4 fw_sbold font_family_inter"> Chaudhary
+                                                Bashir
                                             </h4>
-                                             <p class="fs_15 font_family_poppins">Taunsa Road</p>
+                                            <p class="fs_15 font_family_poppins">Taunsa Road</p>
 
                                         </div>
                                     </div>
@@ -2544,13 +2593,19 @@
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 form-column">
                             <div class="form-inner p_relative d_block mt_12">
-                                <form action="contact.html" method="post" class="subscribe-form default-form">
+                                <form action="javascript:void(0);" method="post" class="subscribe-form default-form"
+                                    id="subscribe-form" novalidate>
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Enter your email address"
-                                            required="">
-                                        <button type="submit" class="theme-btn theme-btn-eight">Get Updates <i
-                                                class="icon-4"></i></button>
+                                        <input type="email" id="subscribe-email" name="email"
+                                            placeholder="Enter your email address" autocomplete="off"
+                                            aria-label="Email address for newsletter" required>
+
+                                        <button type="submit" id="subscribe-submit" class="theme-btn theme-btn-eight">
+                                            Get Updates <i class="icon-4"></i>
+                                        </button>
                                     </div>
+
+                                    <p id="subscribe-message" class="subscribe-message" aria-live="polite"></p>
                                 </form>
                             </div>
                         </div>
