@@ -51,19 +51,20 @@
 }
 
 .range-slider .title:before {
-  position: absolute;
-  content: '$';
+   position: absolute;
+  /* content: '$'; */ 
   left: -5px;
   top: -19px;
   color: #808080;
   font-weight: 500;
   font-size: 15px;
   font-family: "Inter", sans-serif;
+   
 }
 
 .range-slider .input{
   color:#141417;
-  max-width: 75px;
+  max-width: 120px;
 }
 
 .range-slider .input input{
@@ -73,7 +74,7 @@
   font-weight: 500;
   font-family: "Inter", sans-serif;
   text-align:left;
-  width: 80px;
+  width: 160px;
 }
 
 .range-slider .ui-widget.ui-widget-content{

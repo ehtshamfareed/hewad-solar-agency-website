@@ -648,6 +648,51 @@
 	}
 	
 	enableMasonry();
+	
+// 	function enableMasonry() {
+
+//     var $container = $('.grid .row');
+//     var $filter = $('.filter-btns');
+//     var winDow = $(window);
+
+//     $container.isotope({
+//         itemSelector: '.shop-block',
+//         layoutMode: 'fitRows',
+//         transitionDuration: '0.5s'
+//     });
+
+//     $filter.find('li').on('click', function () {
+
+//         var selector = $(this).attr('data-filter');
+
+//         $container.isotope({
+//             filter: selector
+//         });
+
+//         return false;
+//     });
+
+//     $('.filter-btns li').on('click', function () {
+
+//         var $this = $(this);
+
+//         if (!$this.hasClass('active')) {
+//             $('.filter-btns li').removeClass('active');
+//             $this.addClass('active');
+//         }
+//     });
+
+//     winDow.on('resize', function () {
+
+//         var selector = $filter.find('li.active').attr('data-filter');
+
+//         $container.isotope({
+//             filter: selector
+//         });
+//     });
+// }
+
+// enableMasonry();
 
 
     // Progress Bar
@@ -853,19 +898,43 @@
 
 
 	//Price Range Slider
-	if($('.price-range-slider').length){
-		$( ".price-range-slider" ).slider({
-			range: true,
-			min: 120,
-			max: 500,
-			values: [ 120, 300 ],
-			slide: function( event, ui ) {
-			$( "input.property-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-			}
-		});
+	// if($('.price-range-slider').length){
+	// 	$( ".price-range-slider" ).slider({
+	// 		range: true,
+	// 		min: 120,
+	// 		max: 500,
+	// 		values: [ 120, 300 ],
+	// 		slide: function( event, ui ) {
+	// 		$( "input.property-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+	// 		}
+	// 	});
 		
-		$( "input.property-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - pkr" + pkr( ".price-range-slider" ).slider( "values", 1 ) );	
-	}
+	// 	$( "input.property-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - pkr" + pkr( ".price-range-slider" ).slider( "values", 1 ) );	
+	// }
+
+	// Price Range Slider
+if ($('.price-range-slider').length) {
+
+    $(".price-range-slider").slider({
+        range: true,
+        min: 120,
+        max: 500,
+        values: [120, 400],
+
+        slide: function (event, ui) {
+            $("input.property-amount").val(
+                "Rs. " + ui.values[0] + " - Rs. " + ui.values[1]
+            );
+        }
+    });
+
+    $("input.property-amount").val(
+        "Rs. " +
+        $(".price-range-slider").slider("values", 0) +
+        " - Rs. " +
+        $(".price-range-slider").slider("values", 1)
+    );
+}
 
 
 	//Jquery Spinner / Quantity Spinner
@@ -874,28 +943,7 @@
 		  verticalbuttons: true
 		});
 	}
-
-// 	if($('.price-range-slider').length){
-//     $( ".price-range-slider" ).slider({
-//         range: true,
-//         min: 0,
-//         max: 500000,
-//         values: [0, 500000],
-//         slide: function( event, ui ) {
-//             $( "input.property-amount" ).val(
-//                 "PKR " + ui.values[0] + " - PKR " + ui.values[1]
-//             );
-//         }
-//     });
-
-//     $( "input.property-amount" ).val(
-//         "PKR " + ( ".price-range-slider" ).slider("values", 0) +
-//         " - PKR " + ( ".price-range-slider" ).slider("values", 1)
-//     );
-// }
-
-
-	if ($('.product-details-content .bxslider').length) {
+if ($('.product-details-content .bxslider').length) {
 		$('.product-details-content .bxslider').bxSlider({
 	        nextSelector: '.product-details-content #slider-next',
 	        prevSelector: '.product-details-content #slider-prev',
@@ -926,35 +974,149 @@
 			$('#search-popup').removeClass('popup-visible');
 		});
 	}
+// Site Search Suggestions + Redirect
+const siteSearchForm = document.getElementById("site-search-form");
+const siteSearchInput = document.getElementById("site-search-input");
+const siteSearchSuggestions = document.getElementById("site-search-suggestions");
+const siteSearchMessage = document.getElementById("site-search-message");
 
+if (siteSearchForm && siteSearchInput && siteSearchSuggestions && siteSearchMessage) {
 
-	function tabpane() {
-		if($('.tab-pane').length){
-			$('.tab-pane').delay(10).css("display", "none");
-		}
-	}
+    const searchPages = {
+        "pricing": "services.html",
+        "net metering": "service-details.html",
+        "battery": "shop.html"
+    };
 
+    function showSiteSearchSuggestions() {
+        siteSearchSuggestions.innerHTML = "";
 
+        Object.keys(searchPages).forEach(function (keyword) {
+            const suggestionItem = document.createElement("li");
 
-	// Scroll top button
-    $('.scroll-top-inner').on("click", function () {
-        $('html, body').animate({scrollTop: 0}, 500);
-        return false;
-    });
+            suggestionItem.textContent = keyword;
+            suggestionItem.setAttribute("data-url", searchPages[keyword]);
 
+            suggestionItem.addEventListener("click", function () {
+                siteSearchInput.value = keyword;
+                window.location.href = searchPages[keyword];
+            });
 
-    function handleScrollbar() {
-        const bHeight = $('body').height();
-        const scrolled = $(window).innerHeight() + $(window).scrollTop();
+            siteSearchSuggestions.appendChild(suggestionItem);
+        });
 
-        let percentage = ((scrolled / bHeight) * 100);
-
-        if (percentage > 100) percentage = 100;
-
-        $('.scroll-top-inner .bar-inner').css( 'width', percentage + '%');
+        siteSearchSuggestions.style.display = "block";
+        siteSearchMessage.style.display = "none";
     }
 
+    function hideSiteSearchSuggestions() {
+        siteSearchSuggestions.style.display = "none";
+    }
 
+    function handleSiteSearchRedirect() {
+        const searchValue = siteSearchInput.value.trim().toLowerCase();
+
+        if (searchPages[searchValue]) {
+            window.location.href = searchPages[searchValue];
+        } else {
+            siteSearchMessage.textContent = "No result found. Try pricing, net metering, or battery.";
+            siteSearchMessage.style.display = "block";
+            hideSiteSearchSuggestions();
+        }
+    }
+
+    siteSearchInput.addEventListener("focus", showSiteSearchSuggestions);
+    siteSearchInput.addEventListener("click", showSiteSearchSuggestions);
+
+    siteSearchForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        handleSiteSearchRedirect();
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            !siteSearchInput.contains(event.target) &&
+            !siteSearchSuggestions.contains(event.target)
+        ) {
+            hideSiteSearchSuggestions();
+        }
+    });
+}
+
+
+// Subscribe Email Validation
+function setupSubscribeForm(formId, emailId, messageId) {
+    const subscribeForm = document.getElementById(formId);
+    const subscribeEmail = document.getElementById(emailId);
+    const subscribeMessage = document.getElementById(messageId);
+
+    if (!subscribeForm || !subscribeEmail || !subscribeMessage) return;
+
+    function showSubscribeMessage(type, message) {
+        subscribeMessage.textContent = message;
+        subscribeMessage.className = "subscribe-message " + type;
+        subscribeMessage.style.display = "block";
+
+        subscribeEmail.classList.remove("input-error", "input-success");
+
+        if (type === "error") {
+            subscribeEmail.classList.add("input-error");
+        }
+
+        if (type === "success") {
+            subscribeEmail.classList.add("input-success");
+        }
+    }
+
+    function isValidEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
+    subscribeForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const emailValue = subscribeEmail.value.trim();
+
+        if (!emailValue) {
+            showSubscribeMessage("error", "Please enter your email address.");
+            subscribeEmail.focus();
+            return;
+        }
+
+        if (!isValidEmail(emailValue)) {
+            showSubscribeMessage("error", "Please enter a valid email address like name@domain.com.");
+            subscribeEmail.focus();
+            return;
+        }
+
+        showSubscribeMessage("success", "Thank you! Your email has been submitted successfully.");
+
+        setTimeout(function () {
+            subscribeForm.reset();
+            subscribeEmail.classList.remove("input-success");
+        }, 1500);
+    });
+
+    subscribeEmail.addEventListener("input", function () {
+        subscribeEmail.classList.remove("input-error", "input-success");
+        subscribeMessage.textContent = "";
+        subscribeMessage.className = "subscribe-message";
+        subscribeMessage.style.display = "none";
+    });
+}
+
+// Call subscribe validation here
+setupSubscribeForm(
+    "subscribe-form",
+    "subscribe-email",
+    "subscribe-message"
+);
+setupSubscribeForm(
+    "footer-subscribe-form",
+    "footer-subscribe-email",
+    "footer-subscribe-message"
+);
 
     /* 9. ScrollAnimations */
 	var $containers = $('[data-animation]:not([data-animation-text]), [data-animation-box]');
@@ -1008,10 +1170,6 @@
 	        })
 	    }
 	}
-    
-
-    
-
 	/*	=========================================================================
 	When document is Scrollig, do
 	========================================================================== */
