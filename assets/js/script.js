@@ -1055,6 +1055,19 @@
 		tabpane();
 	});
 
-	
+	// ======================================
+// Inquiry Autofill from URL
+// ======================================
+
+const params = new URLSearchParams(window.location.search);
+const system = params.get("system");
+
+if (system) {
+    const solarSize = document.getElementById("solar-size");
+
+    if (solarSize) {
+        solarSize.value = system;
+    }
+}
 
 })(window.jQuery);
