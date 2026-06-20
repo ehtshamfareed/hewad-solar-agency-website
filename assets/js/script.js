@@ -864,7 +864,7 @@
 			}
 		});
 		
-		$( "input.property-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - $" + $( ".price-range-slider" ).slider( "values", 1 ) );	
+		$( "input.property-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - pkr" + pkr( ".price-range-slider" ).slider( "values", 1 ) );	
 	}
 
 
