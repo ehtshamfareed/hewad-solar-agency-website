@@ -1022,6 +1022,20 @@
 			directionswitch();
 			datepicker ();
 			onHoverthreeDmovement();
+			// FAQ Search Filter
+         $("#faq-search").on("keyup", function () {
+
+         let value = $(this).val().toLowerCase();
+
+         $(".faq-content .accordion").each(function () {
+
+         let text = $(this).text().toLowerCase();
+
+         $(this).toggle(text.includes(value));
+
+         });
+
+   });
 		})(jQuery);
 	});
 
